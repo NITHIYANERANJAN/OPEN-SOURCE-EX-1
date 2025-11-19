@@ -1,28 +1,56 @@
 # OPEN-SOURCE-EX-1
-Create a repository file  http://classroom.example.com/content/rhel9.0/x86_64/dvd/AppStream http://classroom.example.com/content/rhel9.0/x86_64/dvd/BaseOS
-# Name : NITHIYANERANJAN S
-# Reg No : 212223040136
-# Dept : CSE
-# Steps involved:
-## Step 1 : cd /etc/yum.repos.d/
-## Step 2 : sudo vi classroom.repo
-## Step 3 : 
-### [AppStream]
-### name=AppStream Repository
-### baseurl=http://classroom.example.com/content/rhel9/x86_64/dvd/AppStream
-### enabled=1
-### gpgcheck=0
 
-### [BaseOS]
-### name=BaseOS Repository
-### baseurl=http://classroom.example.com/content/rhel9/x86_64/dvd/BaseOS
-### enabled=1
-### gpgcheck=0
-## Step 4 : dnf clean all
-## Step 5 :dnf repolist
+## NAME: NITHIYANERANJAN S
+## REGNO: 212223040146  
+## DEPT: CSE
 
-# Output:
-<img width="1256" height="752" alt="Screenshot 2025-11-09 153717" src="https://github.com/user-attachments/assets/5b61bf74-0cdd-4109-b79e-abef310d6b70" />
+## AIM:
+To create a local repository file for RHEL 9 using AppStream and BaseOS URLs and verify the repository setup using DNF commands.
 
-# Result :
-## Thus the steps worked in Red hat lab (Terminal) 
+## PROCEDURE:
+
+### **STEP 1:**  
+Navigate to the repository directory  
+```bash
+cd /etc/yum.repos.d/
+```
+
+### **STEP 2:**  
+Create and open a repo file  
+```bash
+sudo vi classroom.repo
+```
+
+### **STEP 3:**  
+Add the following repository configurations  
+```ini
+[AppStream]
+name=AppStream Repository
+baseurl=http://classroom.example.com/content/rhel9/x86_64/dvd/AppStream
+enabled=1
+gpgcheck=0
+
+[BaseOS]
+name=BaseOS Repository
+baseurl=http://classroom.example.com/content/rhel9/x86_64/dvd/BaseOS
+enabled=1
+gpgcheck=0
+```
+
+### **STEP 4:**  
+Clear the DNF cache  
+```bash
+dnf clean all
+```
+
+### **STEP 5:**  
+Verify the repositories  
+```bash
+dnf repolist
+```
+
+## OUTPUT:
+![Screenshot](https://github.com/user-attachments/assets/5b61bf74-0cdd-4109-b79e-abef310d6b70)
+
+## RESULT:
+The AppStream and BaseOS repositories were successfully configured, cleaned, and verified using DNF commands in the Red Hat Linux environment.
